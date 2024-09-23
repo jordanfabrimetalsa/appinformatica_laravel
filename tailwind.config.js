@@ -10,7 +10,7 @@ export default {
         './resources/js/*.vue',
         './resources/js/components/**',
     ],
-
+    darkMode: 'selector',
     theme: {
         extend: {
             fontFamily: {
