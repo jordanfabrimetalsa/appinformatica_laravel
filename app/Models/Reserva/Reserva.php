@@ -11,6 +11,7 @@ class Reserva extends Model
 
     protected $fillable = [
         'idreserva',
+        'iduser',
         'treserva',
         'item',
         'file',
@@ -30,4 +31,16 @@ class Reserva extends Model
         'updated_user',
         'comentario'
     ];
+
+    public function itemReserva(){
+        return $this->belongsTo('App\Models\Reserva\ItemReserva');
+    }
+
+    public function responsableReserva(){
+        return $this->belongsTo('App\Models\Reserva\ResponsableReserva');
+    }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

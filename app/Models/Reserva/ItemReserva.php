@@ -15,4 +15,8 @@ class ItemReserva extends Model
         'color',
         'vigencia'
     ];
+
+    public function reserva(){
+        return $this->hasMany('App\Models\Reserva\Reserva');
+    }
 }

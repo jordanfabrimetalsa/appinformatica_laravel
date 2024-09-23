@@ -14,4 +14,8 @@ class TVehiculo extends Model
         'nombre',
         'condicion'
     ];
+
+    public function vehiculo(){
+        return $this->hasMany('App\Models\Vehiculo');
+    }
 }

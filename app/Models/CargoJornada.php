@@ -14,4 +14,8 @@ class CargoJornada extends Model
         'id_cargo',
         'jornada'
     ];
+
+    public function cargo(){
+        return $this->belongsToMany('App\Models\Empleado\Cargo');
+    }
 }

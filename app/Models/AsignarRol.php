@@ -14,4 +14,13 @@ class AsignarRol extends Model
         'id_empleado',
         'id_jerarquia'
     ];
+
+    public function empleado(){
+        return $this->belongsToMany('App\Models\Empleado\Empleado');
+    }
+
+    public function jerarquia(){
+        return $this->belongsToMany('App\Models\Empleado\Jerarquia');
+    }
+
 }

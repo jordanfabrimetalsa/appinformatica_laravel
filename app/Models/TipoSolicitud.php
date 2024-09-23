@@ -19,4 +19,8 @@ class TipoSolicitud extends Model
         'created_time',
         'updated_time'
     ];
+
+    public function departamento(){
+        return $this->belongsTo('App\Models\Departamento\Departamento');
+    }
 }

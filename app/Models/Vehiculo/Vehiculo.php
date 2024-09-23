@@ -30,4 +30,17 @@ class Vehiculo extends Model
         'created_time',
         'updated_time'
     ];
+
+
+    public function marca(){
+        return $this->belongsTo('App\Models\Vehiculo\MarcaVehi');
+    }
+
+    public function tVehiculo(){
+        return $this->belongsToMany('App\Models\Vehiculo\TVehiculo');
+    }
+
+    public function modelo(){
+        return $this->belongsTo('App\Models\Vehiculo\ModeloVehi');
+    }
 }

@@ -15,4 +15,12 @@ class TGestion extends Model
         'descripcion',
         'condicion'
     ];
+
+    public function mensajeVehi(){
+        return $this->hasMany('App\Models\Vehiculo\MensajesVehi');
+    }
+
+    public function gestionVehi(){
+        return $this->hasMany('App\Models\Vehiculo\TGestion');
+    }
 }

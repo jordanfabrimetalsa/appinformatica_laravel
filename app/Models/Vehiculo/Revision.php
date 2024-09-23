@@ -49,4 +49,8 @@ class Revision extends Model
         'motor',
         'observaciones'
     ];
+
+    public function asigVehi(){
+        return $this->belongsTo('App\Models\Vehiculo\AsigVehi');
+    }
 }
