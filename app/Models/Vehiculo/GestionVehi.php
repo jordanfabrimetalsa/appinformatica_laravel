@@ -21,4 +21,13 @@ class GestionVehi extends Model
         'closed_time',
         'closed_user'
     ];
+
+    public function vehiculo(){
+        return $this->belongsTo('App\Models\Vehiculo\Vehiculo');
+    }
+
+    public function tGestion(){
+        return $this->belongsTo('App\Models\Vehiculo\TGestion');
+    }
+
 }

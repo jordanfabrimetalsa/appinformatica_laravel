@@ -14,4 +14,12 @@ class TecnicoOficina extends Model
         'idusuario',
         'idoficina'
     ];
+
+    public function user(){
+        return $this->belongsToMany('App\Models\User');
+    }
+
+    public function oficina(){
+        return $this->belongsTo('App\Models\Departamento\TecnicoOficina');
+    }
 }

@@ -11,6 +11,7 @@ class AsigTarjeta extends Model
 
     protected $fillable = [
         'idasigtarjeta',
+        'idtarjeta',
         'idempleado',
         'acta',
         'devolucion',
@@ -22,4 +23,14 @@ class AsigTarjeta extends Model
         'pdf_entrega',
         'pdf_devolucion'
     ];
+
+    public function tarjeta(){
+        return $thisñ->belongsTo('App\Models\Tarjeta\Tarjeta');
+    }
+
+    public function empleado(){
+        return $this->belongsTo('App\Models\Empleado\Empleado');
+    }
+
+
 }

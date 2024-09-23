@@ -14,4 +14,8 @@ class Jerarquia extends Model
         'descripcion',
         'inactive'
     ];
+
+    public function jefe(){
+        return $this->hasOne('App\Models\Empleado\Jefe');
+    }
 }

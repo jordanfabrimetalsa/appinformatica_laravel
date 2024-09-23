@@ -15,4 +15,8 @@ class Imagen extends Model
         'base64',
         'idmensaje'
     ];
+
+    public function mensaje(){
+        return $this->belongsTo('App\Models\Ticket\Mensaje');
+    }
 }

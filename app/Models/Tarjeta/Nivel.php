@@ -13,8 +13,14 @@ class Nivel extends Model
         'idgestion',
         'idchip',
         'detalle',
-        'descripćion',
+        'descripcion',
         'created_time',
         'created_user'
     ];
+
+    public function tarjeta(){
+        return $this->hasMany('App\Models\Tarjeta\Tarjeta');
+    }
+
+    
 }

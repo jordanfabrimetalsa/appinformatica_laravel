@@ -24,4 +24,16 @@ class Chip extends Model
         'created_user',
         'updated_user'
     ];
+
+    public function operador(){
+        return $this->belongsTo('App\Models\Movil\Operador');
+    }
+
+    public function asignacion(){
+        return $this->hasMany('App\Models\Movil\Asignacion');
+    }
+
+    public function gestionChip(){
+        return $this->hasOne('App\Models\Movil\GestionChip');
+    }
 }

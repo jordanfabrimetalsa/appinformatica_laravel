@@ -18,4 +18,12 @@ class Mensajes extends Model
         'vistouser',
         'vistoadmin'
     ];
+
+    public function ticket(){
+        return $this->belongsTo('App\Models\Ticket\Ticket');
+    }
+
+    public function imagen(){
+        return $this->hasMany('App\Models\Ticket\Imagen');
+    }
 }

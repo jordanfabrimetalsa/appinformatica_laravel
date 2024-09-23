@@ -14,4 +14,12 @@ class OficinaDepartamento extends Model
         'idoficinas',
         'iddepartamento'
     ];
+
+    public function oficina(){
+        return $this->belongsToMany('App\Models\Departamento\Oficina');
+    }
+
+    public function departamento(){
+        return $this->belongsToMany('App\Models\Departamento\Departamento');
+    }
 }

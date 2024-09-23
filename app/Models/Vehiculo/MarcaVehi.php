@@ -14,4 +14,12 @@ class MarcaVehi extends Model
         'nombre',
         'condicion'
     ];
+
+    public function modelo(){
+        return $this->hasMany('App\Models\Vehiculo\ModeloVehi');
+    }
+
+    public function vehiculo(){
+        return $this->hasMany('App\Models\Vehiculo\Vehiculo');
+    }
 }

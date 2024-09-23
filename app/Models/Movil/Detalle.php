@@ -18,4 +18,8 @@ class Detalle extends Model
         'color',
         'tipo'
     ];
+
+    public function equipo(){
+        return $this->hasMany('App\Models\Movil\Equipo');
+    }
 }

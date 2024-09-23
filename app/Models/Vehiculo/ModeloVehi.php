@@ -15,4 +15,12 @@ class ModeloVehi extends Model
         'idmarca',
         'condicion'
     ];
+
+    public function marca(){
+        return $this->belongsTo('App\Models\Vehiculo\MarcaVehi');
+    }
+
+    public function vehiculo(){
+        return $this->hasMany('App\Models\Vehiculo\Vehiculo');
+    }
 }

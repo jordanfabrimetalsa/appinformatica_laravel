@@ -17,4 +17,8 @@ class MensajesVehi extends Model
         'created_time',
         'created_user'
     ];
+
+    public function tGestion(){
+        return $this->belongsTo('App\Models\Vehiculo\TGestion');
+    }
 }

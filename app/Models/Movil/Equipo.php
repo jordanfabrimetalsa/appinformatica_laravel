@@ -24,4 +24,12 @@ class Equipo extends Model
         'iddetalle',
         'detalle'
     ];
+
+    public function detalle(){
+        return $this->belongsTo('App\Models\Movil\Detalle');
+    }
+
+    public function asignacion(){
+        return $this->hasOne('App\Models\Movil\Asignacion');
+    }
 }

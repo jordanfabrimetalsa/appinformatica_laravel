@@ -23,4 +23,12 @@ class Ticket extends Model
         'closed_time',
         'closed_user'
     ];
+
+    public function empleado(){
+        return $this->belongsTo('App\Models\Empleado\Empleado');
+    }
+
+    public function mensaje(){
+        return $this->hasMany('App\Models\Ticket\Mensaje');
+    }
 }

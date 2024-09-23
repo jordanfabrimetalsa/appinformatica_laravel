@@ -26,4 +26,20 @@ class Computador extends Model
         'disponible',
         'detalle'
     ];
+
+    public function asigCompu(){
+        return $this->hasOne('App\Models\Computador\AsigCompu');
+    }
+
+    public function marca(){
+        return $this->belongsTo('App\Models\Computador\MarcaCom');
+    }
+
+    public function tcomputador(){
+        return $this->belongsTo('App\Models\Computador\TComputador'); 
+    }
+
+    public function gestionCompu(){
+        return $this->hasOne('App\Models\Computador\GestionCompu');
+    }
 }

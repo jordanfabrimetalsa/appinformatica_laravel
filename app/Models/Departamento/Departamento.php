@@ -14,4 +14,17 @@ class Departamento extends Model
         'nombre',
         'intranet'
     ];
+
+    public function cargo(){
+        return $this->hasMany('App\Models\Empleado\Cargo');
+    }
+
+    public function oficinaDepartamento(){
+        return $this->hasMany('App\Models\Departamento\OficinaDepartamento');
+    }
+
+    public function tipoSolicitud(){
+        return $this->hasMany('App\Models\TipoSolicitud');
+    }
+
 }

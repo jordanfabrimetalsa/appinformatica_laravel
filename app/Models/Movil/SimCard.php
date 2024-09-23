@@ -23,4 +23,13 @@ class SimCard extends Model
         'condicion',
         'disponbile'
     ];
+
+    public function operador(){
+        return $this->belongsTo('App\Models\Movil\Operador');
+    }
 }
+
+
+
+
+

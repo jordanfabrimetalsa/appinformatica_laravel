@@ -22,4 +22,12 @@ class Tarjeta extends Model
         'updated_user',
         'condicion'
     ];
+
+    public function asigtarjeta(){
+        return $this->hasOne('App\Models\Tarjeta\AsigTarjeta');
+    }
+
+    public function Nivel(){
+        return $this->belongsToMany('App\Models\Tarjeta\Nivel');
+    }    
 }

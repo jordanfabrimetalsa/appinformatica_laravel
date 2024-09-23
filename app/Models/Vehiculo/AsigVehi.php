@@ -28,4 +28,17 @@ class AsigVehi extends Model
         'pdf_devolucion',
         'asignacion'
     ];
+
+    public function empleado(){
+        return $this->belongsTo('App\Models\Empleado\Empleado');
+    }
+
+    public function revision(){
+        return $this->belongsTo('App\Models\Vehiculo\Revision');
+    }
+
+    public function vehiculo(){
+        return $this->belongsTo('App\Models\Vehiculo\Vehiculo');
+    }
+
 }

@@ -17,4 +17,8 @@ class GestionChip extends Model
         'created_time',
         'created_user'
     ];
+
+    public function chip(){
+        return $this->belongsToMany('App\Models\Movil\Chip');
+    }
 }
