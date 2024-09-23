@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Computador;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Computador\asignarComputadorController;
 
 class asignarController extends Controller
 {
@@ -12,7 +13,8 @@ class asignarController extends Controller
      */
     public function index()
     {
-        //
+        $data = asignarComputadorController::paginate();
+        return response()->json($data);
     }
 
     /**

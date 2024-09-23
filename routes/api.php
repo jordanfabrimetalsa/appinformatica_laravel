@@ -29,26 +29,26 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::resources('asignarcomputador', asignarComputadorController::class)->except(['create', 'edit']);
-Route::resources('computador', computadorController::class)->except(['create', 'edit']);
+Route::resource('asignarcomputador', asignarComputadorController::class)->except(['create', 'edit']);
+Route::resource('computador', computadorController::class)->except(['create', 'edit']);
 
-Route::resources('departamento', departamentoController::class)->except(['create', 'edit']);
-Route::resources('oficina', oficinaController::class)->except(['create', 'edit']);
+Route::resource('departamento', departamentoController::class)->except(['create', 'edit']);
+Route::resource('oficina', oficinaController::class)->except(['create', 'edit']);
 
-Route::resources('empleado', empleadoController::class)->except(['create', 'edit']);
+Route::resource('empleado', empleadoController::class)->except(['create', 'edit']);
 
-Route::resources('asignarmovil', asignarMovilController::class)->except(['create', 'edit']);
-Route::resources('equipo', equipoController::class)->except(['create', 'edit']);
-Route::resources('gestionmovil', gestionMovilController::class)->except(['create', 'edit']);
-Route::resources('movil', movilController::class)->except(['create', 'edit']);
+Route::resource('asignarmovil', asignarMovilController::class)->except(['create', 'edit']);
+Route::resource('equipo', equipoController::class)->except(['create', 'edit']);
+Route::resource('gestionmovil', gestionMovilController::class)->except(['create', 'edit']);
+Route::resource('movil', movilController::class)->except(['create', 'edit']);
 
-Route::resources('asignartarjeta', asignarTarjetaController::class)->except(['create', 'edit']);
-Route::resources('nivel', nivelController::class)->except(['create', 'edit']);
-Route::resources('tarjeta', tarjetaController::class)->except(['create', 'edit']);
+Route::resource('asignartarjeta', asignarTarjetaController::class)->except(['create', 'edit']);
+Route::resource('nivel', nivelController::class)->except(['create', 'edit']);
+Route::resource('tarjeta', tarjetaController::class)->except(['create', 'edit']);
 
-Route::resources('asignarvehiculo', asignarVehiculoController::class)->except(['create', 'edit']);
-Route::resources('gestionvehiculo', gestionVehiculoController::class)->except(['create', 'edit']);
-Route::resources('marca', marcaController::class)->except(['create', 'edit']);
-Route::resources('modelo', modeloController::class)->except(['create', 'edit']);
-Route::resources('vehiculo', vehiculoController::class)->except(['create', 'edit']);
+Route::resource('asignarvehiculo', asignarVehiculoController::class)->except(['create', 'edit']);
+Route::resource('gestionvehiculo', gestionVehiculoController::class)->except(['create', 'edit']);
+Route::resource('marca', marcaController::class)->except(['create', 'edit']);
+Route::resource('modelo', modeloController::class)->except(['create', 'edit']);
+Route::resource('vehiculo', vehiculoController::class)->except(['create', 'edit']);
 

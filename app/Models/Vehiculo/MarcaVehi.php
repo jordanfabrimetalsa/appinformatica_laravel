@@ -9,6 +9,7 @@ class MarcaVehi extends Model
 {
     use HasFactory;
 
+    protected $table = 'marcave';
     protected $fillable = [
         'idmarca',
         'nombre',
