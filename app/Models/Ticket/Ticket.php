@@ -13,6 +13,8 @@ class Ticket extends Model
 
     protected $primaryKey = "idticket";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idticket',
         'idempleado',

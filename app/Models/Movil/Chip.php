@@ -13,6 +13,8 @@ class Chip extends Model
 
     protected $primaryKey = "idchip";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idchip',
         'serial',

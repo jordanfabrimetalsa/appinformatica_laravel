@@ -13,6 +13,8 @@ class AsigVehi extends Model
 
     protected $primaryKey = "idasigvehi";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idasigvehi',
         'idvehiculo',

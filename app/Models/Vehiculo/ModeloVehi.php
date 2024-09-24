@@ -12,6 +12,8 @@ class ModeloVehi extends Model
     protected $table = "modelove";
 
     protected $primaryKey = "idmodelove";
+
+    public $timestamps = false;
     
     protected $fillable = [
         'idmodelove',

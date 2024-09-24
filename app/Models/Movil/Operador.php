@@ -13,6 +13,8 @@ class Operador extends Model
 
     protected $primaryKey = "idoperador";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idoperador',
         'nombre',

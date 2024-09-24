@@ -13,6 +13,8 @@ class OficinaDepartamento extends Model
 
     protected $primaryKey = "idoficina_departamento";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idoficina_departamento',
         'idoficinas',

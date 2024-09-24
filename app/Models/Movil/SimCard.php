@@ -13,6 +13,8 @@ class SimCard extends Model
 
     protected $primaryKey = "idsimcard";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idsimcard',
         'serial',

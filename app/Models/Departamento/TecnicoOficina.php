@@ -13,6 +13,8 @@ class TecnicoOficina extends Model
 
     protected $primaryKey = "idtecofi";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idtecofi',
         'idusuario',

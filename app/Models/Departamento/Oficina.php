@@ -13,6 +13,8 @@ class Oficinas extends Model
 
     protected $primaryKey = "idoficinas";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idoficinas',
         'nombre',

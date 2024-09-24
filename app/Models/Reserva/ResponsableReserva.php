@@ -13,6 +13,8 @@ class ResponsableReserva extends Model
 
     protected $primaryKey = "idresponsable";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idresponsable',
         'nombre',

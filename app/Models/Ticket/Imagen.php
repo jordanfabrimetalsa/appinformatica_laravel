@@ -13,6 +13,8 @@ class Imagen extends Model
 
     protected $primaryKey = "idimagen";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idimagen',
         'file',

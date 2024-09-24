@@ -13,6 +13,8 @@ class TGestion extends Model
 
     protected $primaryKey = "idtgestion_ve";
 
+    public $timestamps = false;
+
     protected $filleable = [
         'idtgestion_ve',
         'titulo',

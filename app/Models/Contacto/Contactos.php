@@ -13,6 +13,8 @@ class Contactos extends Model
 
     protected $primaryKey = "cidcontacto";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'cidcontacto',
         'cidproveedor',

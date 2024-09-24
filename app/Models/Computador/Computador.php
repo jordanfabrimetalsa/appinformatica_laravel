@@ -13,6 +13,8 @@ class Computador extends Model
     
     protected $primaryKey = "idcomputador";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idcomputador',
         'idmarca',

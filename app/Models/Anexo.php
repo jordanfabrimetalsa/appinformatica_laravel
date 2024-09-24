@@ -14,6 +14,8 @@ class Anexos extends Model
 
     protected $primaryKey = "idanexos";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idanexos',
         'numero',

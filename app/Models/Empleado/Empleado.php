@@ -13,6 +13,8 @@ class Empleado extends Model
 
     protected $primaryKey = "idempleado";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idempleado',
         'nombre',

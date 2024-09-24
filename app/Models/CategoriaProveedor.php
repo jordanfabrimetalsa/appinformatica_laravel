@@ -13,5 +13,7 @@ class CategoriaProveedor extends Model
 
     protected $primaryKey = "idcategoria";
 
+    public $timestamps = false;
+
     protected $fillable = ['idcategoria','nombre'];
 }

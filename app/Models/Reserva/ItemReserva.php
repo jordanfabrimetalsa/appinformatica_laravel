@@ -13,6 +13,8 @@ class ItemReserva extends Model
 
     protected $primaryKey = "iditem";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'iditem',
         'nombre',

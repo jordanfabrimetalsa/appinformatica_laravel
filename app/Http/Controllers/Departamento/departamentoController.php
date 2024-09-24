@@ -21,7 +21,12 @@ class departamentoController extends Controller
 
     public function store(Request $request)
     {
-        return response()->json(Departamento::create($request));
+        $departamento = Departamento::create($request->all());
+        return response()->json([
+            'status' => true,
+            'message' => 'Se ha creado un nuevo departamento',
+            'data' => $departamento
+        ], 200);
     }
 
     public function show(string $id)

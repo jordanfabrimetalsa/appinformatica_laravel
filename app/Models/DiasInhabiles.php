@@ -13,5 +13,7 @@ class DiasInhabiles extends Model
 
     protected $primaryKey = "id_dia";
 
+    public $timestamps = false;
+
     protected $fillable = ['id_dia', 'dia_inhabi'];
 }

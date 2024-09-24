@@ -13,6 +13,8 @@ class Dispositivo extends Model
 
     protected $primaryKey = "iddispositivo";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'iddispositivo',
         'marca',

@@ -13,6 +13,8 @@ class Cargos extends Model
 
     protected $primaryKey = "idcargos";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idcargos',
         'nombre',

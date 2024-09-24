@@ -12,6 +12,8 @@ class ContactoProveedor extends Model
     protected $table = "contacto_proveedores";
 
     protected $primaryKey = "idproveedor";
+
+    public $timestamps = false;
     
     protected $fillable = 
     [

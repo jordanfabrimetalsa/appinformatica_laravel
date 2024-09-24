@@ -13,6 +13,8 @@ class TipoSolicitud extends Model
 
     protected $primaryKey = "idtipo_solicitud";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idtipo_solicitud',
         'iddepartamento',

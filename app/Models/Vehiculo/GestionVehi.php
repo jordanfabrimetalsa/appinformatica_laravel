@@ -13,6 +13,8 @@ class GestionVehi extends Model
 
     protected $primaryKey = "idgestion_ve";
 
+    public $timestamps = false;
+
     protected $filleable = [
         'idgestion_ve',
         'idvehiculo',

@@ -13,6 +13,8 @@ class TComputador extends Model
 
     protected $primaryKey = "idtcomputador";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idtcomputador',
         'nombre',

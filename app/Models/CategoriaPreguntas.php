@@ -13,5 +13,7 @@ class CategoriaPreguntas extends Model
 
     protected $primaryKey = "idcategoria";
 
+    public $timestamps = false;
+
     protected $fillable = ['idcategoria', 'nombre', 'condicion'];
 }

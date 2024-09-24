@@ -13,6 +13,8 @@ class Comunas extends Model
 
     protected $primaryKey = "comunas_id";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'comunas_id',
         'comuna_nombre',

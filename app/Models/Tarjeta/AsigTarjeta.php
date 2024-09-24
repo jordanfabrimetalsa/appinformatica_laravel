@@ -13,6 +13,8 @@ class AsigTarjeta extends Model
 
     protected $primaryKey = "idasigtarjeta";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idasigtarjeta',
         'idtarjeta',

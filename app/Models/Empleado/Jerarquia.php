@@ -13,6 +13,8 @@ class Jerarquia extends Model
 
     protected $primaryKey = "id";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'id',
         'descripcion',

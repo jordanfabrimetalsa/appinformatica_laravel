@@ -13,6 +13,8 @@ class Detalle extends Model
 
     protected $primaryKey = "iddetalle";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'iddetalle',
         'marca',

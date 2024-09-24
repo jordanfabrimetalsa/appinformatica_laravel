@@ -13,6 +13,8 @@ class MensajesVehi extends Model
 
     protected $primaryKey = "idmensaje_ve";
 
+    public $timestamps = false;
+
     protected $filleable = [
         'idmensaje_ve',
         'idgestion_ve',

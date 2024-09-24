@@ -13,6 +13,8 @@ class Revision extends Model
 
     protected $primaryKey = "idrevision";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idrevision',
         'idasigvehi',

@@ -13,6 +13,8 @@ class MarcaVehi extends Model
 
     protected $primaryKey = "idmarca";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idmarca',
         'nombre',

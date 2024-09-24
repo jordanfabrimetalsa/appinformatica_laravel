@@ -13,6 +13,8 @@ class Reserva extends Model
 
     protected $primaryKey = "idreserva";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idreserva',
         'iduser',

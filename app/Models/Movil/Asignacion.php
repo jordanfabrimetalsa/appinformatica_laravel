@@ -13,6 +13,8 @@ class Asignacion extends Model
 
     protected $primaryKey = "idasignacion";
 
+    public $timestamps = false;
+
     protected $filleable = [
         'idasginacion',
         'fecha',

@@ -13,6 +13,8 @@ class CargoJornada extends Model
 
     protected $primaryKey = "id_cj";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'id_cj',
         'id_cargo',

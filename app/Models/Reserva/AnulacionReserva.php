@@ -13,6 +13,8 @@ class AnulacionReserva extends Model
 
     protected $primaryKey = "idanulacion";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idanulacion',
         'nombre',

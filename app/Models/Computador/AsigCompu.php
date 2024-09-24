@@ -13,6 +13,8 @@ class AsigCompu extends Model
     
     protected $primaryKey = "idasigcompu";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idasigcompu',
         'idcomputador',

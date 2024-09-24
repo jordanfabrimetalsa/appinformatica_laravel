@@ -13,6 +13,8 @@ class Tarjeta extends Model
 
     protected $primaryKey = "idtarjeta";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idtarjeta',
         'idnivel',

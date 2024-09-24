@@ -13,6 +13,8 @@ class Regiones extends Model
 
     protected $primaryKey = "region_id";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'region_id',
         'region_nombre',

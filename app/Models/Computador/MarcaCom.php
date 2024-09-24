@@ -13,6 +13,8 @@ class MarcaCom extends Model
 
     protected $primaryKey = "idmarcacomp";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idmarcacomp',
         'nombre',

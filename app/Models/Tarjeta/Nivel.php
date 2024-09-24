@@ -13,6 +13,8 @@ class Nivel extends Model
 
     protected $primaryKey = "idgestion";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idgestion',
         'idchip',

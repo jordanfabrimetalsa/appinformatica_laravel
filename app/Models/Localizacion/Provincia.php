@@ -12,6 +12,8 @@ class Provincias extends Model
     protected $table = "provincias";
 
     protected $primaryKey = "provincia_id";
+
+    public $timestamps = false;
     
     protected $fillable = [
         'provincia_id',

@@ -13,6 +13,8 @@ class AsignarRol extends Model
 
     protected $primaryKey = "id";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'id',
         'id_empleado',

@@ -12,6 +12,8 @@ class GestionCompu extends Model
     protected $table = "gestioncompu";
 
     protected $primaryKey = "idgestion";
+    
+    public $timestamps = false;
 
     protected $fillable = [
         'idgestion',

@@ -13,6 +13,8 @@ class Equipo extends Model
 
     protected $primaryKey = "idequipo";
 
+    public $timestamps = false;
+
     protected $fillable = [
         'idequipo',
         'imei',
