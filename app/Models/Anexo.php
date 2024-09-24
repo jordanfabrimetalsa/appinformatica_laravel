@@ -10,6 +10,8 @@ class Anexos extends Model
 {
     use HasFactory;
 
+    protected $table = "anexos";
+
     protected $fillable = [
         'idanexos',
         'numero',

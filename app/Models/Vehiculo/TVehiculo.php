@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Vehiculo;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,6 +10,7 @@ class TVehiculo extends Model
     use HasFactory;
 
     protected $table = 'tvehiculo';
+
     protected $filleable = [
         'idtvehiculo',
         'nombre',

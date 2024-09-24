@@ -9,5 +9,7 @@ class DiasInhabiles extends Model
 {
     use HasFactory;
 
+    protected $table = "dias_inhabiles";
+
     protected $fillable = ['id_dia', 'dia_inhabi'];
 }

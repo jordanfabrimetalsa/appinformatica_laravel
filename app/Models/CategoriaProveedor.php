@@ -9,5 +9,7 @@ class CategoriaProveedor extends Model
 {
     use HasFactory;
 
+    protected $table = "categoria_proveedor";
+
     protected $fillable = ['idcategoria','nombre'];
 }

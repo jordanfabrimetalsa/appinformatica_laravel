@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Reserva;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Reserva extends Model
 {
     use HasFactory;
+
+    protected $table = "reserva";
 
     protected $fillable = [
         'idreserva',

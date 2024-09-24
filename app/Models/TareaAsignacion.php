@@ -9,6 +9,8 @@ class TareaAsignacion extends Model
 {
     use HasFactory;
 
+    protected $table = "tarea_asignacion";
+
     protected $fillable = [
         'id_tarea',
         'id_empleado',
@@ -28,4 +30,8 @@ class TareaAsignacion extends Model
         'id_empleado_creacion',
         'resta_hora'
     ];
+
+    public function empleado(){
+        return $this->belongsTo('App\Models\Empleado\Empleado');
+    }
 }

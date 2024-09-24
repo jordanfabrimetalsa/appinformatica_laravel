@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Movil;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Asignacion extends Model
 {
     use HasFactory;
+
+    protected $table = "asignacion";
 
     protected $filleable = [
         'idasginacion',

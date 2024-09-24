@@ -9,6 +9,8 @@ class Dispositivo extends Model
 {
     use HasFactory;
 
+    protected $table = "dispositivo";
+
     protected $fillable = [
         'iddispositivo',
         'marca',

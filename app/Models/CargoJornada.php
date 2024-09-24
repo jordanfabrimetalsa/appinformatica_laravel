@@ -9,6 +9,8 @@ class CargoJornada extends Model
 {
     use HasFactory;
 
+    protected $table = "cargo_jornada";
+
     protected $fillable = [
         'id_cj',
         'id_cargo',

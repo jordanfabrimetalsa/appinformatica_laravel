@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Departamento;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class OficinaDepartamento extends Model
 {
     use HasFactory;
+
+    protected $table = "oficina_departamento";
 
     protected $fillable = [
         'idoficina_departamento',

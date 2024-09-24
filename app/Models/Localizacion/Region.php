@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Localizacion;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Regiones extends Model
 {
     use HasFactory;
+    
+    protected $table = "regiones";
 
     protected $fillable = [
         'region_id',

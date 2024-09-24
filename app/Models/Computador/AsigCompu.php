@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Computador;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class AsigCompu extends Model
 {
     use HasFactory;
+
+    protected $table = "asigcompu";
 
     protected $fillable = [
         'idasigcompu',

@@ -9,6 +9,8 @@ class TipoSolicitud extends Model
 {
     use HasFactory;
 
+    protected $table = "tipo_solicitud";
+
     protected $fillable = [
         'idtipo_solicitud',
         'iddepartamento',

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Departamento;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,7 +9,8 @@ class Departamento extends Model
 {
     use HasFactory;
 
-    protected $table = ['departamento'];
+    protected $table = "departamento";
+
     protected $fillable = [
         'iddepartamento',
         'nombre',
@@ -27,5 +28,4 @@ class Departamento extends Model
     public function tipoSolicitud(){
         return $this->hasMany('App\Models\TipoSolicitud');
     }
-
 }
