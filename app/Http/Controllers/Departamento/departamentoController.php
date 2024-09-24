@@ -41,7 +41,14 @@ class departamentoController extends Controller
 
     public function update(Request $request, string $id)
     {
+        $departamento = Departamento::findOrFail($id);
+        $departamento->update($request->all());
         
+        return response()->json([
+            'status' => true,
+            'message' => 'Se ha actualizado los datos',
+            'data' => $departamento
+        ], 200);
     }
 
     public function destroy(string $id)
