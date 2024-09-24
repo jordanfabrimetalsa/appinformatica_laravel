@@ -11,9 +11,15 @@ class TComputador extends Model
 
     protected $table = "tcomputador";
 
+    protected $primaryKey = "idtcomputador";
+
     protected $fillable = [
         'idtcomputador',
         'nombre',
         'condicion'
     ];
+
+    public function computador(){
+        return $this->hasMany('App\Models\Computador\Computador');
+    }
 }

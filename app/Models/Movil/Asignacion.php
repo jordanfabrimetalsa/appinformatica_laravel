@@ -11,6 +11,8 @@ class Asignacion extends Model
 
     protected $table = "asignacion";
 
+    protected $primaryKey = "idasignacion";
+
     protected $filleable = [
         'idasginacion',
         'fecha',

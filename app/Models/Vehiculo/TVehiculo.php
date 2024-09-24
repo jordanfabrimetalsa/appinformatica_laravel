@@ -11,6 +11,8 @@ class TVehiculo extends Model
 
     protected $table = 'tvehiculo';
 
+    protected $primaryKey = "idtvehiculo";
+
     protected $filleable = [
         'idtvehiculo',
         'nombre',

@@ -11,6 +11,8 @@ class Dispositivo extends Model
 
     protected $table = "dispositivo";
 
+    protected $primaryKey = "iddispositivo";
+
     protected $fillable = [
         'iddispositivo',
         'marca',

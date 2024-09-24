@@ -10,6 +10,8 @@ class Departamento extends Model
     use HasFactory;
 
     protected $table = "departamento";
+    
+    protected $primaryKey = 'iddepartamento';
 
     protected $fillable = [
         'iddepartamento',

@@ -11,6 +11,8 @@ class Revision extends Model
 
     protected $table = "revision";
 
+    protected $primaryKey = "idrevision";
+
     protected $fillable = [
         'idrevision',
         'idasigvehi',

@@ -9,7 +9,9 @@ class ModeloVehi extends Model
 {
     use HasFactory;
 
-    protected $table = 'modelove';
+    protected $table = "modelove";
+
+    protected $primaryKey = "idmodelove";
     
     protected $fillable = [
         'idmodelove',

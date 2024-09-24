@@ -11,6 +11,8 @@ class Jerarquia extends Model
 
     protected $table = "jerarquia";
 
+    protected $primaryKey = "id";
+
     protected $fillable = [
         'id',
         'descripcion',

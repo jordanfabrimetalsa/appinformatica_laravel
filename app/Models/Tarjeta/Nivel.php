@@ -11,6 +11,8 @@ class Nivel extends Model
 
     protected $table = "nivel";
 
+    protected $primaryKey = "idgestion";
+
     protected $fillable = [
         'idgestion',
         'idchip',

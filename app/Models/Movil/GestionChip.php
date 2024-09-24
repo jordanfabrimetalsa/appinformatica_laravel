@@ -11,6 +11,8 @@ class GestionChip extends Model
 
     protected $table = "gestionchip";
 
+    protected $primaryKey = "idgestion";
+
     protected $fillable = [
         'idgestion',
         'idchip',

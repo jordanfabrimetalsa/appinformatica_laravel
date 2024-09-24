@@ -11,9 +11,15 @@ class MarcaCom extends Model
 
     protected $table = "marcacom";
 
+    protected $primaryKey = "idmarcacomp";
+
     protected $fillable = [
         'idmarcacomp',
         'nombre',
         'condicion'
     ];
+
+    public function computador(){
+        return $this->hasMany('App\Models\Computador\Computador');
+    }
 }

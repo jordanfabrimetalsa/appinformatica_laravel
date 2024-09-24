@@ -10,9 +10,13 @@ class ContactoProveedor extends Model
     use HasFactory;
 
     protected $table = "contacto_proveedores";
+
+    protected $primaryKey = "idproveedor";
     
     protected $fillable = 
-    ['rut', 
+    [
+     'idproveedor',
+     'rut', 
      'nombre', 
      'nombrefantasia', 
      'direccion', 
@@ -22,4 +26,8 @@ class ContactoProveedor extends Model
      'categoria',
      'observacion'
     ];
+
+    public function contacto(){
+        return $this->hasMany('App\Models\Contacto\Contactos'); 
+    }
 }

@@ -11,6 +11,8 @@ class MarcaVehi extends Model
 
     protected $table = "marcave";
 
+    protected $primaryKey = "idmarca";
+
     protected $fillable = [
         'idmarca',
         'nombre',

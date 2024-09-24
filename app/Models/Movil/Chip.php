@@ -11,6 +11,8 @@ class Chip extends Model
 
     protected $table = "chip";
 
+    protected $primaryKey = "idchip";
+
     protected $fillable = [
         'idchip',
         'serial',

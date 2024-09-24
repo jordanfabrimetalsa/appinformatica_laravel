@@ -11,6 +11,8 @@ class Empleado extends Model
 
     protected $table = "empleado";
 
+    protected $primaryKey = "idempleado";
+
     protected $fillable = [
         'idempleado',
         'nombre',

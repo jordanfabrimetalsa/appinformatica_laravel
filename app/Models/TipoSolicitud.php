@@ -11,6 +11,8 @@ class TipoSolicitud extends Model
 
     protected $table = "tipo_solicitud";
 
+    protected $primaryKey = "idtipo_solicitud";
+
     protected $fillable = [
         'idtipo_solicitud',
         'iddepartamento',

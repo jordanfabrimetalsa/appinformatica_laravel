@@ -11,6 +11,8 @@ class Operador extends Model
 
     protected $table = "operador";
 
+    protected $primaryKey = "idoperador";
+
     protected $fillable = [
         'idoperador',
         'nombre',

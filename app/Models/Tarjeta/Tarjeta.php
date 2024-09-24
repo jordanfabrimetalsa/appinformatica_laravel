@@ -11,6 +11,8 @@ class Tarjeta extends Model
 
     protected $table = "tarjeta";
 
+    protected $primaryKey = "idtarjeta";
+
     protected $fillable = [
         'idtarjeta',
         'idnivel',

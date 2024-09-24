@@ -11,6 +11,8 @@ class Detalle extends Model
 
     protected $table = "detalle";
 
+    protected $primaryKey = "iddetalle";
+
     protected $fillable = [
         'iddetalle',
         'marca',

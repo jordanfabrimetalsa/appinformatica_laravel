@@ -11,5 +11,7 @@ class CategoriaPreguntas extends Model
 
     protected $table = "categoria_preguntas";
 
+    protected $primaryKey = "idcategoria";
+
     protected $fillable = ['idcategoria', 'nombre', 'condicion'];
 }

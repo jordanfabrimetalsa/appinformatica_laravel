@@ -11,5 +11,7 @@ class CategoriaProveedor extends Model
 
     protected $table = "categoria_proveedor";
 
+    protected $primaryKey = "idcategoria";
+
     protected $fillable = ['idcategoria','nombre'];
 }

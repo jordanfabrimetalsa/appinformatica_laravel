@@ -11,6 +11,8 @@ class TecnicoOficina extends Model
 
     protected $table = "tecnico_oficina";
 
+    protected $primaryKey = "idtecofi";
+
     protected $fillable = [
         'idtecofi',
         'idusuario',

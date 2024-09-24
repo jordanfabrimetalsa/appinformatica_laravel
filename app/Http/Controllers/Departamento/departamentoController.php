@@ -12,7 +12,11 @@ class departamentoController extends Controller
     public function index()
     {
         $data = Departamento::all();
-        return response()->json($data);
+        return response()->json([
+            'status' => true,
+            'message' => 'Observar los datos de la tabla',
+            'data' => $data
+        ],200);
     }
 
     public function store(Request $request)
@@ -22,7 +26,12 @@ class departamentoController extends Controller
 
     public function show(string $id)
     {
-        
+        $departamento = Departamento::where('iddepartamento', $id)->firstOrFail();
+        return response()->json([
+            'status' => true,
+            'message' => 'Datos encontrados.',
+            'data' => $departamento
+        ], 200);
     }
 
     public function update(Request $request, string $id)
@@ -30,10 +39,15 @@ class departamentoController extends Controller
         
     }
 
-    public function destroy(Departamento $departamento)
+    public function destroy(string $id)
     {
-        $departamento->delete($departamento);
-        return response()->json('ok');
+        $departamento = Departamento::where('iddepartamento', $id)->firstOrFail();
+        $departamento->delete();
+        
+        return response()->json([
+            'status' => true,
+            'message' => 'Se ha eliminado con éxito!'
+        ], 204);
 
     }
 }

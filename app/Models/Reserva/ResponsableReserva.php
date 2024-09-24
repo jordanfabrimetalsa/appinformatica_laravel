@@ -11,6 +11,8 @@ class ResponsableReserva extends Model
 
     protected $table = "responsable_reserva";
 
+    protected $primaryKey = "idresponsable";
+
     protected $fillable = [
         'idresponsable',
         'nombre',

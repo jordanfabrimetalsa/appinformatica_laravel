@@ -11,6 +11,8 @@ class SimCard extends Model
 
     protected $table = "simcard";
 
+    protected $primaryKey = "idsimcard";
+
     protected $fillable = [
         'idsimcard',
         'serial',

@@ -10,6 +10,8 @@ class Computador extends Model
     use HasFactory;
 
     protected $table = "computador";
+    
+    protected $primaryKey = "idcomputador";
 
     protected $fillable = [
         'idcomputador',

@@ -11,6 +11,8 @@ class TareaAsignacion extends Model
 
     protected $table = "tarea_asignacion";
 
+    protected $primaryKey = "id_tarea";
+
     protected $fillable = [
         'id_tarea',
         'id_empleado',

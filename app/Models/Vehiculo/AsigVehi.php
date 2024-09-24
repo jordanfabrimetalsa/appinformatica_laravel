@@ -11,6 +11,8 @@ class AsigVehi extends Model
 
     protected $table = "asigvehi";
 
+    protected $primaryKey = "idasigvehi";
+
     protected $fillable = [
         'idasigvehi',
         'idvehiculo',

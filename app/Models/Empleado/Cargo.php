@@ -11,12 +11,13 @@ class Cargos extends Model
 
     protected $table = "cargos";
 
+    protected $primaryKey = "idcargos";
+
     protected $fillable = [
         'idcargos',
         'nombre',
         'iddepartamento'
     ];
-
 
     public function departamento(){
         return $this->belongsToMany('App\Models\Departamento\Departamento');

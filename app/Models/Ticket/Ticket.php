@@ -11,6 +11,8 @@ class Ticket extends Model
 
     protected $table = "ticket";
 
+    protected $primaryKey = "idticket";
+
     protected $fillable = [
         'idticket',
         'idempleado',

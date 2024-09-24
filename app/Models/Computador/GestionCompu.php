@@ -11,6 +11,8 @@ class GestionCompu extends Model
 
     protected $table = "gestioncompu";
 
+    protected $primaryKey = "idgestion";
+
     protected $fillable = [
         'idgestion',
         'idcomputador',
@@ -19,4 +21,8 @@ class GestionCompu extends Model
         'created_time',
         'creatd_user'
     ];
+
+    public function computador(){
+        return $this->belongsTo('App\Models\Computador\Computador');
+    }
 }

@@ -11,6 +11,8 @@ class Mensajes extends Model
 
     protected $table = "mensajes";
 
+    protected $primaryKey = "idmensajes";
+
     protected $fillable = [
         'idmensajes',
         'cuerpo',

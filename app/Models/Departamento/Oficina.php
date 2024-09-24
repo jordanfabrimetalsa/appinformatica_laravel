@@ -11,6 +11,8 @@ class Oficinas extends Model
 
     protected $table = "oficinas";
 
+    protected $primaryKey = "idoficinas";
+
     protected $fillable = [
         'idoficinas',
         'nombre',

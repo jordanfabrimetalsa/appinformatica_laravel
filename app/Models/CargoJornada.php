@@ -11,6 +11,8 @@ class CargoJornada extends Model
 
     protected $table = "cargo_jornada";
 
+    protected $primaryKey = "id_cj";
+
     protected $fillable = [
         'id_cj',
         'id_cargo',

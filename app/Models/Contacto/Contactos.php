@@ -11,6 +11,8 @@ class Contactos extends Model
 
     protected $table = "contactos";
 
+    protected $primaryKey = "cidcontacto";
+
     protected $fillable = [
         'cidcontacto',
         'cidproveedor',
@@ -21,4 +23,8 @@ class Contactos extends Model
         'ccategoria',
         'cobservacion'
     ];
+
+    public function contactoProveedores(){
+        return $this->belongsTo('App\Models\Contacto\ContactoProveedor');
+    }
 }

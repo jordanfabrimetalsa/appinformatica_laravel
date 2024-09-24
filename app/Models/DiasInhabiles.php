@@ -11,5 +11,7 @@ class DiasInhabiles extends Model
 
     protected $table = "dias_inhabiles";
 
+    protected $primaryKey = "id_dia";
+
     protected $fillable = ['id_dia', 'dia_inhabi'];
 }

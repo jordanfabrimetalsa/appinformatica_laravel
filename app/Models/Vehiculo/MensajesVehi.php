@@ -11,6 +11,8 @@ class MensajesVehi extends Model
 
     protected $table = "mensajes_ve";
 
+    protected $primaryKey = "idmensaje_ve";
+
     protected $filleable = [
         'idmensaje_ve',
         'idgestion_ve',

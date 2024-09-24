@@ -11,6 +11,8 @@ class Jefe extends Model
 
     protected $table = "jefe";
 
+    protected $primaryKey = "id";
+
     protected $fillable = [
         'id',
         'id_empleado',

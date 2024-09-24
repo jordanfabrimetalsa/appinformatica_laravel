@@ -11,6 +11,8 @@ class ItemReserva extends Model
 
     protected $table = "item_reserva";
 
+    protected $primaryKey = "iditem";
+
     protected $fillable = [
         'iditem',
         'nombre',

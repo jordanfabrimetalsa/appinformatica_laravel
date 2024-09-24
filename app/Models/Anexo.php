@@ -12,6 +12,8 @@ class Anexos extends Model
 
     protected $table = "anexos";
 
+    protected $primaryKey = "idanexos";
+
     protected $fillable = [
         'idanexos',
         'numero',

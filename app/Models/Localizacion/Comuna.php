@@ -11,6 +11,8 @@ class Comunas extends Model
 
     protected $table = "comunas";
 
+    protected $primaryKey = "comunas_id";
+
     protected $fillable = [
         'comunas_id',
         'comuna_nombre',

@@ -11,6 +11,8 @@ class TGestion extends Model
 
     protected $table = "tgestion";
 
+    protected $primaryKey = "idtgestion_ve";
+
     protected $filleable = [
         'idtgestion_ve',
         'titulo',

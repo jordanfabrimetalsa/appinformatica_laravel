@@ -10,6 +10,8 @@ class AsigCompu extends Model
     use HasFactory;
 
     protected $table = "asigcompu";
+    
+    protected $primaryKey = "idasigcompu";
 
     protected $fillable = [
         'idasigcompu',

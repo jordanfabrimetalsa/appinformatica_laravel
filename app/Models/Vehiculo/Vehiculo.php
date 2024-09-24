@@ -11,6 +11,8 @@ class Vehiculo extends Model
 
     protected $table = 'vehiculo';
 
+    protected $primaryKey = "idvehiculo";
+
     protected $fillable = [
         'idvehiculo',
         'idmarca',

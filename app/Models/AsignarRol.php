@@ -11,6 +11,8 @@ class AsignarRol extends Model
 
     protected $table = "asignar_rol";
 
+    protected $primaryKey = "id";
+
     protected $fillable = [
         'id',
         'id_empleado',

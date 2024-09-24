@@ -11,6 +11,8 @@ class AnulacionReserva extends Model
 
     protected $table = "anulacion_reserva";
 
+    protected $primaryKey = "idanulacion";
+
     protected $fillable = [
         'idanulacion',
         'nombre',

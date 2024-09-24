@@ -11,6 +11,8 @@ class Equipo extends Model
 
     protected $table = "equipo";
 
+    protected $primaryKey = "idequipo";
+
     protected $fillable = [
         'idequipo',
         'imei',
