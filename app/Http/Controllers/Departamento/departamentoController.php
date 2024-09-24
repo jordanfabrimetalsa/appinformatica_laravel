@@ -17,9 +17,8 @@ class departamentoController extends Controller
 
     public function store(Request $request)
     {
-        
+        return response()->json(Departamento::create($request));
     }
-
 
     public function show(string $id)
     {
@@ -31,8 +30,10 @@ class departamentoController extends Controller
         
     }
 
-    public function destroy(string $id)
+    public function destroy(Departamento $departamento)
     {
-        
+        $departamento->delete($departamento);
+        return response()->json('ok');
+
     }
 }
