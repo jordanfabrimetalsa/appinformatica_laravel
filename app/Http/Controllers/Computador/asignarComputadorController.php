@@ -4,64 +4,117 @@ namespace App\Http\Controllers\Computador;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Computador\asignarComputadorController;
+use App\Models\Computador\AsigCompu;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\QueryException;
 
-class asignarController extends Controller
+
+class asignarComputadorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $data = asignarComputadorController::paginate();
-        return response()->json($data);
+        try{
+            $asignar = AsigCompu::paginate();
+            return response()->json([
+                'status' => true,
+                'messages' => 'Todos los Registros!',
+                'data' => $asignar 
+            ], 200);
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'status' => false,
+                'messages' => 'Asignación no encontrada.',
+            ], 404); 
+        }catch(Exception $e){
+            return response()->json([
+                'status' => false,
+                'messages' => 'Ha ocurrido algun error al realizar la petición!',
+            ], 500);
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        try
+        {   
+            $asignar = AsigCompu::create($request->all());
+            return response()->json([
+                'status' => true,
+                'messages' => 'Se ha registrado con exito!',
+                'data' => $asignar
+            ], 200);
+        }catch(Exception $e){
+            return response()->json([
+                'status' => false,
+                'messages' => 'Ha ocurrido algun error al realizar la petición!',
+            ], 500);
+        }
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
-        //
+        try{
+            $asignar = AsigCompu::findOrFail($id);
+            return response()->json([
+                'status' => true,
+                'messages' => 'Ahora visualizas los datos de la Asignación!',
+                'data' => $asignar
+            ], 200);
+        }catch(ModelNotFoundException $e) {
+            return response()->json([
+                'status' => false,
+                'messages' => 'Asignación no encontrada.',
+            ], 404); 
+        }catch(Exception $e){
+            return response()->json([
+                'status' => false,
+                'messages' => 'Ha ocurrido algun error al realizar la petición!',
+            ], 500);
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        try{
+            $asignar = AsigCompu::findOrFail($id);
+            $asignar->update($request->all());
+            return response()->json([
+                'status' => true,
+                'message' => 'Se ha actualizado correctamente los datos',
+                'data' => $asginar
+            ], 200);
+        }catch(Excepcion $e){
+            return response()->json([
+                'status' => false,
+                'message' => 'Ha ocurrido algun error al realizar la petición.',
+            ], 500);
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        try{
+            $asignar = AsigCompu::findOrFail($id);
+            $asignar->delete();
+            return response()->json([
+                'status' => true,
+                'message' => 'Se ha eliminado correctamente la asignación',
+            ], 200);
+        }catch(ModelNotFoundException $e){
+            return response()->json([
+                'status' => false,
+                'messages' => 'Asignación no encontrada.',
+            ], 404);
+        }catch(QueryException $e) {
+            return response()->json([
+                'status' => false,
+                'message' => 'No se puede eliminar la Asignación porque tiene dependencias.',
+            ], 409);
+        }catch(Exception $e){
+            return response()->json([
+                'status' => false,
+                'message'=> 'Ha ocurrido algun error al realizar la petición.',
+            ], 500);
+        }
     }
 }
