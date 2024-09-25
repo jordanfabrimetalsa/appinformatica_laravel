@@ -37,10 +37,10 @@ class AsigCompu extends Model
     ];
 
     public function empleado(){
-        return $this->belongsTo('App\Models\Empleado\Empleado');
+        return $this->belongsTo('App\Models\Empleado\Empleado', 'idempleado', 'idempleado');
     }
 
     public function computador(){
-        return $this->belongsTo('App\Models\Computador\Computador');
+        return $this->belongsTo('App\Models\Computador\Computador', 'idcomputador', 'idcomputador');
     }
 }

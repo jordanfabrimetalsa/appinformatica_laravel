@@ -25,9 +25,9 @@ class Oficina extends Model
     ];
 
     public function region(){
-        return $this->belongsTo('App\Models\Localizacion\Region');
+        return $this->belongsTo('App\Models\Localizacion\Region', 'idregiones', 'region_id');
     }
-
+    
     public function provincia(){
         return $this->belongsTo('App\Models\Localizacion\Provincia');
     }

@@ -53,12 +53,12 @@ class oficinaController extends Controller
     public function show(string $id)
     {
         try{
-            $oficina = Oficina::findOrFail($id);
+            $oficina = Oficina::with('region')->findOrFail($id);
             return response()->json([
                 'status' => true,
                 'message' => 'Listado de todas las Oficina!',
                 'data' => $oficina
-            ], 200);
+            ], 200);    
 
         }catch(ModelNotFoundException $e){
             return response()->json([

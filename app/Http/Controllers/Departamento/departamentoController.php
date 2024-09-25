@@ -39,7 +39,7 @@ class departamentoController extends Controller
     {
         try{
             $departamento = Departamento::create($request->all());
-            Mail::to('jaguilera@fabrimetalsa.cl')->send(new DepartamentoCreatedMail($departamento));
+            //Mail::to('jaguilera@fabrimetalsa.cl')->send(new DepartamentoCreatedMail($departamento));
             return response()->json([
                 'status' => true,
                 'message' => 'Se ha creado un nuevo departamento',

@@ -5,12 +5,12 @@ namespace App\Models\Localizacion;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Regiones extends Model
+class Region extends Model
 {
     use HasFactory;
     
     protected $table = "regiones";
-
+                                                                                                 
     protected $primaryKey = "region_id";
 
     public $timestamps = false;
@@ -21,7 +21,7 @@ class Regiones extends Model
         'region_ordinal'
     ];
 
-    public function oficina(){
+    public function region(){
         return $this->hasMany('App\Models\Departamento\Oficina');
     }
 

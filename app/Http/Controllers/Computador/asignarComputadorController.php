@@ -14,7 +14,7 @@ class asignarComputadorController extends Controller
     public function index()
     {
         try{
-            $asignar = AsigCompu::with(['empleado','computador'])->paginate();
+            $asignar = AsigCompu::paginate();
             return response()->json([
                 'status' => true,
                 'messages' => 'Todos los Registros!',
@@ -54,7 +54,7 @@ class asignarComputadorController extends Controller
     public function show(string $id)
     {
         try{
-            $asignar = AsigCompu::findOrFail($id);
+            $asignar = AsigCompu::with(['empleado','computador'])->findOrFail($id);
             return response()->json([
                 'status' => true,
                 'messages' => 'Ahora visualizas los datos de la Asignación!',
