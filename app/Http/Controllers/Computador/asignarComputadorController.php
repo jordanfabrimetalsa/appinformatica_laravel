@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 use App\Models\Computador\AsigCompu;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
-
+use App\Http\Requests\AsigComputador\StoreRequest;
 
 class asignarComputadorController extends Controller
 {
     public function index()
     {
         try{
-            $asignar = AsigCompu::paginate();
+            $asignar = AsigCompu::with(['empleado','computador'])->get();
             return response()->json([
                 'status' => true,
                 'messages' => 'Todos los Registros!',
@@ -33,11 +33,11 @@ class asignarComputadorController extends Controller
         }
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         try
         {   
-            $asignar = AsigCompu::create($request->all());
+            $asignar = AsigCompu::create($request->validated());
             return response()->json([
                 'status' => true,
                 'messages' => 'Se ha registrado con exito!',
