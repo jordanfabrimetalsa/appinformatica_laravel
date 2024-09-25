@@ -38,7 +38,7 @@ class Computador extends Model
     }
 
     public function marca(){
-        return $this->belongsTo('App\Models\Computador\MarcaCom');
+        return $this->belongsTo('App\Models\Computador\MarcaCom'); 
     }
 
     public function tcomputador(){

@@ -13,7 +13,7 @@ class oficinaController extends Controller
     public function index()
     {
         try{
-            $oficina = Oficina::paginate();
+            $oficina = Oficina::all();
             return response()->json([
                 'status' => true,
                 'message' => 'Listado de todas las Oficina!',
@@ -53,7 +53,7 @@ class oficinaController extends Controller
     public function show(string $id)
     {
         try{
-            $oficina = Oficina::findOrFail();
+            $oficina = Oficina::findOrFail($id);
             return response()->json([
                 'status' => true,
                 'message' => 'Listado de todas las Oficina!',

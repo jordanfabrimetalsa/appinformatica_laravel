@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Departamento\Departamento;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DepartamentoCreatedMail;
 
 class departamentoController extends Controller
 {
@@ -37,6 +39,7 @@ class departamentoController extends Controller
     {
         try{
             $departamento = Departamento::create($request->all());
+            Mail::to('jaguilera@fabrimetalsa.cl')->send(new DepartamentoCreatedMail($departamento));
             return response()->json([
                 'status' => true,
                 'message' => 'Se ha creado un nuevo departamento',

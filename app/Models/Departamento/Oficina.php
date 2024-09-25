@@ -5,7 +5,7 @@ namespace App\Models\Departamento;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Oficinas extends Model
+class Oficina extends Model
 {
     use HasFactory;
 
@@ -21,8 +21,7 @@ class Oficinas extends Model
         'direccion',
         'idcomunas',
         'idregiones',
-        'idprovincias',
-        'vistoadmin'
+        'idprovincias'
     ];
 
     public function region(){

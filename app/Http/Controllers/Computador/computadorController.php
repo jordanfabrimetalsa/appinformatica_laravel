@@ -5,15 +5,17 @@ namespace App\Http\Controllers\Computador;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Computador\Computador;
+use App\Models\Computador\MarcaCom;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Mail;
 
 class computadorController extends Controller
 {
     public function index()
     {
         try{
-            $computador = Computador::paginate();
+            $computador = Computador::with('marca')->paginate();
             return response()->json([
                 'status' => true,
                 'message' => 'Listado de Computadores!',

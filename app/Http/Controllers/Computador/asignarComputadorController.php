@@ -14,7 +14,7 @@ class asignarComputadorController extends Controller
     public function index()
     {
         try{
-            $asignar = AsigCompu::paginate();
+            $asignar = AsigCompu::with(['empleado','computador'])->paginate();
             return response()->json([
                 'status' => true,
                 'messages' => 'Todos los Registros!',

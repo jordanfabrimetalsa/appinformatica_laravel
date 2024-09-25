@@ -21,7 +21,8 @@ class MarcaCom extends Model
         'condicion'
     ];
 
-    public function computador(){
+    public function marca(){
         return $this->hasMany('App\Models\Computador\Computador');
     }
+    
 }
