@@ -5,7 +5,7 @@ namespace App\Models\Localizacion;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comunas extends Model
+class Comuna extends Model
 {
     use HasFactory;
 

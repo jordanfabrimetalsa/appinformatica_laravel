@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use App\Models\Departamento\Oficina;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
+use App\Http\Requests\Oficina\StoreRequest;
 
 class oficinaController extends Controller
 {
     public function index()
     {
         try{
-            $oficina = Oficina::all();
+            $oficina = Oficina::with(['region','provincia','comuna'])->get();
             return response()->json([
                 'status' => true,
                 'message' => 'Listado de todas las Oficina!',
@@ -33,10 +34,10 @@ class oficinaController extends Controller
         }
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         try{
-            $oficina = Oficina::create($request->all());
+            $oficina = Oficina::create($request->validated());
             return response()->json([
                 'status' => true,
                 'message' => 'Se ha registrado con exito!',

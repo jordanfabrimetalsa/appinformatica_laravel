@@ -29,15 +29,15 @@ class Oficina extends Model
     }
     
     public function provincia(){
-        return $this->belongsTo('App\Models\Localizacion\Provincia');
+        return $this->belongsTo('App\Models\Localizacion\Provincia', 'idprovincias', 'provincia_id');
     }
 
     public function comuna(){
-        return $this->belongsTo('App\Models\Localizacion\Comuna');
+        return $this->belongsTo('App\Models\Localizacion\Comuna', 'idcomunas', 'comuna_id');
     }
 
     public function tecnicoOficina(){
-        return $this->belongsToMany('App\Models\Departamento\TecnicoOficina');
+        return $this->hasMany('App\Models\Departamento\TecnicoOficina');
     }
 
     public function anexo(){
