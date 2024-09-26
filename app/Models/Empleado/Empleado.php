@@ -32,8 +32,8 @@ class Empleado extends Model
         'imagen',
         'base64',
         'condicion',
-        'create_time',
-        'updated_time',
+        'create_user',
+        'updated_user',
         'idcargo',
         'idcomunas',
         'idprovincias',
@@ -43,23 +43,23 @@ class Empleado extends Model
     ];
 
     public function cargo(){
-        return $this->belongsTo('App\Models\Empleado\Cargo');
+        return $this->belongsTo('App\Models\Empleado\Cargo', 'idcargo', 'idcargos');
     }
     
     public function comuna(){
-        return $this->belongsTo('App\Models\Localizacion\Comuna');
+        return $this->belongsTo('App\Models\Localizacion\Comuna', 'idcomunas', 'comuna_id');
     }
 
     public function provincia(){
-        return $this->belongsTo('App\Models\Localizacion\Provincia');
+        return $this->belongsTo('App\Models\Localizacion\Provincia', 'idprovincias', 'provincia_id');
     }
 
     public function regiones(){
-        return $this->belongsTo('App\Models\Localizacion\Region');
+        return $this->belongsTo('App\Models\Localizacion\Region', 'idregiones', 'region_id');
     }
 
     public function oficinaDepartamento(){
-        return $this->belongsTo('App\Models\Departamento\OficinaDepartamento');
+        return $this->belongsTo('App\Models\Departamento\OficinaDepartamento', 'idoficina_departamento', 'idoficina_departamento');
     }
 
     public function tareaAsignacion(){

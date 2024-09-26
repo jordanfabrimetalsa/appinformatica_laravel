@@ -28,4 +28,8 @@ class OficinaDepartamento extends Model
     public function departamento(){
         return $this->belongsToMany('App\Models\Departamento\Departamento');
     }
+
+    public function oficinaDepartamento(){
+        return $this->hasOne('App\Models\Empleado\Empleado');
+    }
 }

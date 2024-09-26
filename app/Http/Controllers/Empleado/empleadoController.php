@@ -7,12 +7,13 @@ use Illuminate\Http\Request;
 use App\Models\Empleado\Empleado;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
+use App\Http\Requests\Empleado\StoreRequest;
 
 class empleadoController extends Controller
 {
     public function index(){
         try{
-            $empleado = Empleado::paginate();
+            $empleado = Empleado::with(['cargo', 'comuna', 'provincia', 'regiones', 'oficinaDepartamento'])->get();
             return response()->json([
                 'status' => true,
                 'message' => 'Todos los registros de Empleados',
@@ -26,9 +27,9 @@ class empleadoController extends Controller
         }
     }
 
-    public function store(Request $request){
+    public function store(StoreRequest $request){
         try{
-            $empleado = Empleado::create($request->all());
+            $empleado = Empleado::create($request->validated());
             return response()->json([
                 'status' => true,
                 'message' => 'Se ha ingresado el Empleado correctamente!',
@@ -66,7 +67,7 @@ class empleadoController extends Controller
 
     public function show(string $id){
         try{
-            $empleado = Empleado::findOrFail($id);
+            $empleado = Empleado::with(['cargo', 'comuna', 'provincia', 'regiones', 'oficinaDepartamento'])->findOrFail($id);
             response()->json([
                 'status' => true,
                 'message' => 'Los datos del empleado seleccionado!',
@@ -87,7 +88,7 @@ class empleadoController extends Controller
 
     public function destroy(string $id){
         try{
-            $empleado = Empleado::find($id);
+            $empleado = Empleado::findOrFail($id);
             $empleado->delete();
             return response()->json([
                 'status' => true,

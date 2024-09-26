@@ -43,6 +43,11 @@ class oficinaController extends Controller
                 'message' => 'Se ha registrado con exito!',
                 'data' => $oficina
             ], 200);
+        }catch(QueryException $e){
+            return response()->json([
+                'status' => false,
+                'message' => 'Problema con la consulta a la Base de Datos'
+            ]);
         }catch(Exception $e){
             return response()->json([
                 'status' => false,
