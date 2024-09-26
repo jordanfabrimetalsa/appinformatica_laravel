@@ -21,7 +21,7 @@ class TComputador extends Model
         'condicion'
     ];
 
-    public function computador(){
+    public function tcomputador(){
         return $this->hasMany('App\Models\Computador\Computador');
     }
 }

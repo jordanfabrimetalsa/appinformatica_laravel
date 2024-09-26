@@ -9,13 +9,14 @@ use App\Models\Computador\MarcaCom;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Requests\Computador\StoreRequest;
 
 class computadorController extends Controller
 {
     public function index()
     {
         try{
-            $computador = Computador::with('marca')->paginate();
+            $computador = Computador::with(['tcomputador', 'marcacom'])->get();
             return response()->json([
                 'status' => true,
                 'message' => 'Listado de Computadores!',
@@ -32,13 +33,12 @@ class computadorController extends Controller
                 'messages' => 'Ha ocurrido algun error al realizar la petición!',
             ], 500);
         }
-
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         try{
-            $computador = Computador::create($request->all());
+            $computador = Computador::create($request->validated());
             return response()->json([
                 'status' => true,
                 'message' => 'Se ha creado con Exito!',
@@ -55,7 +55,7 @@ class computadorController extends Controller
     public function show(string $id)
     {
         try{
-            $computador = Computador::where('idcomputador', $id)->firstOrFail();
+            $computador = Computador::with(['tcomputador', 'marcacom'])->findOrFail($id);
             return response()->json([
                 'status' => true,
                 'message' => 'Visualización de los datos',

@@ -16,7 +16,6 @@ class Computador extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'idcomputador',
         'idmarca',
         'modelo',
         'tcomputador',
@@ -37,12 +36,12 @@ class Computador extends Model
         return $this->hasOne('App\Models\Computador\AsigCompu');
     }
 
-    public function marca(){
-        return $this->belongsTo('App\Models\Computador\MarcaCom'); 
+    public function marcacom(){
+        return $this->belongsTo('App\Models\Computador\MarcaCom', 'idmarca', 'idmarcacom'); 
     }
 
     public function tcomputador(){
-        return $this->belongsTo('App\Models\Computador\TComputador'); 
+        return $this->belongsTo('App\Models\Computador\TComputador', 'tcomputador', 'idtcomputador'); 
     }
 
     public function gestionCompu(){

@@ -11,18 +11,17 @@ class MarcaCom extends Model
 
     protected $table = "marcacom";
 
-    protected $primaryKey = "idmarcacomp";
+    protected $primaryKey = "idmarcacom";
 
     public $timestamps = false;
 
     protected $fillable = [
-        'idmarcacomp',
+        'idmarcacom',
         'nombre',
         'condicion'
     ];
 
-    public function marca(){
+    public function marcacom(){
         return $this->hasMany('App\Models\Computador\Computador');
     }
-    
 }
