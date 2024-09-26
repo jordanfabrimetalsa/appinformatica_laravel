@@ -29,7 +29,7 @@ class AsigCompu extends Model
         'detalle',
         'created_time',
         'closed_time',
-        'create_user',
+        'created_user',
         'closed_user',
         'condicion',
         'pdf_entrega',
@@ -42,5 +42,9 @@ class AsigCompu extends Model
 
     public function computador(){
         return $this->belongsTo('App\Models\Computador\Computador', 'idcomputador', 'idcomputador');
+    }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'created_user', 'id');
     }
 }

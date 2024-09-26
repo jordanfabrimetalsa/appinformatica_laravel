@@ -6,22 +6,16 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
+            'idcomputador' => 'required|numeric',
+            'idempleado' => 'required|numeric',
             'nomequipo' => 'required|string',
             'usuario' => 'required|string',
             'pass' => 'required',
@@ -30,6 +24,8 @@ class StoreRequest extends FormRequest
             'acta' => 'required|numeric',
             'devolucion' => 'required|numeric',
             'detalle' => 'required|string',
+            'created_user' => 'required|numeric', 
+            'closed_user' => 'required',
             'condicion' => 'required|numeric',
             'pdf_entrega' => 'required|string',
             'pdf_devolucion' => 'required|string'
