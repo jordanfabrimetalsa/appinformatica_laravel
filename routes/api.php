@@ -12,7 +12,7 @@ use App\Http\Controllers\Empleado\empleadoController;
 
 use App\Http\Controllers\Movil\asignarMovilController;
 use App\Http\Controllers\Movil\equipoController;
-use App\Http\Controllers\Movil\gestionMovilController;
+use App\Http\Controllers\Movil\gestionChipController;
 use App\Http\Controllers\Movil\movilController;
 
 use App\Http\Controllers\Tarjeta\asignarTarjetaController;
@@ -46,8 +46,8 @@ Route::resource('asignar-movil', asignarMovilController::class)->except(['create
 Route::get('asignar-movil/{id?}', [asignarMovilController::class, 'show']);
 Route::resource('equipo', equipoController::class)->except(['create', 'edit']);
 Route::get('equipo/{id?}', [equipoController::class, 'show']);
-Route::resource('gestion-movil', gestionMovilController::class)->except(['create', 'edit']);
-Route::get('gestion-movil/{id?}', [gestionMovilController::class, 'show']);
+Route::resource('gestion-chip', gestionChipController::class)->except(['create', 'edit']);
+Route::get('gestion-chip/{id?}', [gestionChipController::class, 'show']);
 Route::resource('movil', movilController::class)->except(['create', 'edit']);
 Route::get('movil/{id?}', [movilController::class ,'show']);
 

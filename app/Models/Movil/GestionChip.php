@@ -16,15 +16,13 @@ class GestionChip extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'idgestion',
         'idchip',
         'detalle',
         'descripcion',
-        'created_time',
         'created_user'
     ];
 
     public function chip(){
-        return $this->belongsToMany('App\Models\Movil\Chip');
+        return $this->belongsTo('App\Models\Movil\Chip', 'idchip', 'idchip');
     }
 }
