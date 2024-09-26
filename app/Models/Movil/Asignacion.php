@@ -15,8 +15,7 @@ class Asignacion extends Model
 
     public $timestamps = false;
 
-    protected $filleable = [
-        'idasginacion',
+    protected $fillable = [
         'fecha',
         'idequipo',
         'idempleado',
@@ -26,8 +25,6 @@ class Asignacion extends Model
         'acta',
         'devolucion',
         'detalle',
-        'created_time',
-        'updated_time',
         'created_user',
         'updated_user',
         'condicion',
@@ -36,15 +33,15 @@ class Asignacion extends Model
     ];
 
     public function equipo(){
-        return $this->belongsTo('App\Models\Movil\Equipo');
+        return $this->belongsTo('App\Models\Movil\Equipo', 'idequipo', 'idequipo');
     }
 
     public function empleado(){
-        return $this->belongsTo('App\Models\Empleado\Empleado');
+        return $this->belongsTo('App\Models\Empleado\Empleado', 'idempleado', 'idempleado');
     }
 
     public function chip(){
-        return $this->belongsTo('App\Models\Movil\Chip');
+        return $this->belongsTo('App\Models\Movil\Chip', 'idchip', 'idchip');
     }
 
 }
