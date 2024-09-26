@@ -53,7 +53,6 @@ Route::get('movil/{id?}', [movilController::class ,'show']);
 
 Route::resource('asignar-tarjeta', asignarTarjetaController::class)->except(['create', 'edit']);
 Route::get('asignar-tarjeta/{id?}',[asignarTarjetaController::class, 'show']);
-
 Route::resource('nivel', nivelController::class)->except(['create', 'edit']);
 Route::get('nivel/{id?}', [nivelController::class, 'show']);
 Route::resource('tarjeta', tarjetaController::class)->except(['create', 'edit']);

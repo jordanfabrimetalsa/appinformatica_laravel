@@ -16,14 +16,11 @@ class AsigTarjeta extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'idasigtarjeta',
         'idtarjeta',
         'idempleado',
         'acta',
         'devolucion',
-        'created_time',
         'created_user',
-        'closed_time',
         'closed_user',
         'condicion',
         'pdf_entrega',
@@ -31,12 +28,11 @@ class AsigTarjeta extends Model
     ];
 
     public function tarjeta(){
-        return $thisñ->belongsTo('App\Models\Tarjeta\Tarjeta');
+        return $this->belongsTo('App\Models\Tarjeta\Tarjeta', 'idtarjeta', 'idtarjeta');
     }
 
     public function empleado(){
-        return $this->belongsTo('App\Models\Empleado\Empleado');
+        return $this->belongsTo('App\Models\Empleado\Empleado', 'idempleado', 'idempleado');
     }
-
 
 }
