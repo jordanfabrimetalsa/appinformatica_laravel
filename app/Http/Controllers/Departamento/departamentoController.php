@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\DepartamentoCreatedMail;
+use App\Http\Requests\Departamento\StoreRequest;
 
 class departamentoController extends Controller
 {
@@ -35,10 +36,10 @@ class departamentoController extends Controller
         }    
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         try{
-            $departamento = Departamento::create($request->all());
+            $departamento = Departamento::create($request->validated());
             //Mail::to('jaguilera@fabrimetalsa.cl')->send(new DepartamentoCreatedMail($departamento));
             return response()->json([
                 'status' => true,
@@ -96,7 +97,7 @@ class departamentoController extends Controller
     public function destroy(string $id)
     {
         try{
-            $departamento = Departamento::where('iddepartamento', $id)->firstOrFail();
+            $departamento = Departamento::findOrFail($id);
             $departamento->delete();
             return response()->json([
                 'status' => true,
