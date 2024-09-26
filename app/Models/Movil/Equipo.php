@@ -22,8 +22,6 @@ class Equipo extends Model
         'caja',
         'create_user',
         'updated_user',
-        'create_time',
-        'updated_time',
         'condicion',
         'estado',
         'disponible',
@@ -32,7 +30,7 @@ class Equipo extends Model
     ];
 
     public function detalle(){
-        return $this->belongsTo('App\Models\Movil\Detalle');
+        return $this->belongsTo('App\Models\Movil\Detalle', 'iddetalle', 'iddetalle');
     }
 
     public function asignacion(){
