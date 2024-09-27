@@ -11,22 +11,17 @@ class Nivel extends Model
 
     protected $table = "nivel";
 
-    protected $primaryKey = "idgestion";
+    protected $primaryKey = "idnivel";
 
     public $timestamps = false;
 
     protected $fillable = [
-        'idgestion',
-        'idchip',
-        'detalle',
+        'nombre',
         'descripcion',
-        'created_time',
-        'created_user'
+        'condicion',
     ];
 
     public function tarjeta(){
         return $this->hasMany('App\Models\Tarjeta\Tarjeta');
     }
-
-    
 }
