@@ -16,12 +16,9 @@ class AsigVehi extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'idasigvehi',
         'idvehiculo',
         'idempleado',
         'entregado',
-        'created_time',
-        'close_time',
         'created_user',
         'close_user',
         'condicion',
@@ -36,15 +33,15 @@ class AsigVehi extends Model
     ];
 
     public function empleado(){
-        return $this->belongsTo('App\Models\Empleado\Empleado');
+        return $this->belongsTo('App\Models\Empleado\Empleado', 'idempleado', 'idempleado');
     }
 
     public function revision(){
-        return $this->belongsTo('App\Models\Vehiculo\Revision');
+        return $this->hasOne('App\Models\Vehiculo\Revision');
     }
 
     public function vehiculo(){
-        return $this->belongsTo('App\Models\Vehiculo\Vehiculo');
+        return $this->belongsTo('App\Models\Vehiculo\Vehiculo', 'idvehiculo', 'idvehiculo');
     }
 
 }

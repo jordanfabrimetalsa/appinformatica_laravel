@@ -16,24 +16,21 @@ class Tarjeta extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'idtarjeta',
         'idnivel',
         'codigo',
         'codigosys',
         'descripcion',
         'disponible',
-        'created_time',
         'created_user',
-        'updated_time',
         'updated_user',
-        'condicion'
+        'condicion',
     ];
 
     public function asigtarjeta(){
         return $this->hasOne('App\Models\Tarjeta\AsigTarjeta');
     }
 
-    public function Nivel(){
-        return $this->belongsToMany('App\Models\Tarjeta\Nivel');
+    public function nivel(){
+        return $this->belongsTo('App\Models\Tarjeta\Nivel', 'idnivel', 'idnivel');
     }    
 }
