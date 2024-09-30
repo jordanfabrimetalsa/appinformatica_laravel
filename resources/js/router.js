@@ -127,7 +127,7 @@ const routes = [
     component: HistoricoComputador
   },
 
-  /*VEHICULO------------------------------*/
+  /*TARJETA------------------------------*/
 
   { 
     name: 'asignaciontarjeta',
@@ -145,7 +145,7 @@ const routes = [
     component: Tarjeta
   },
 
-  /*TARJETA-------------------------------*/
+  /*VEHICULO-------------------------------*/
 
   { 
     name: 'asignacionvehiculo',

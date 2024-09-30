@@ -14,10 +14,11 @@
                         <i class='bx bxs-chevron-down arrow'></i>
                     </div>
                     <ul class="sub-menu">
-                        <li class="dark:hover:bg-gray-900"><router-link to="estadomoviles">Móviles</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="estadovehiculo">Vehículo</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="estadoequipo">Computadores</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="estadotarjeta">Tarjeta ID</router-link></li>
+                        
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'movildash' }">Móviles</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'vehiculodash' }">Vehículo</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'computadordash' }">Computadores</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'tarjetadash' }">Tarjeta ID</router-link></li>
                     </ul>
                 </li>
                 <li>
@@ -29,8 +30,8 @@
                         <i class='bx bxs-chevron-down arrow'></i>
                     </div>
                     <ul class="sub-menu">
-                        <li class="dark:hover:bg-gray-900"><router-link to="empleado">Empleados</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="docempleado">Doc. del Empleado</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'empleado' }">Empleados</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'docempleado' }">Doc. del Empleado</router-link></li>
                     </ul>
                 </li>
                 <li>
@@ -42,11 +43,11 @@
                         <i class='bx bxs-chevron-down arrow'></i>
                     </div>
                     <ul class="sub-menu">
-                        <li class="dark:hover:bg-gray-900"><router-link to="asignacion">Asignaciones</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="asignacion_hist">Asig. Historicos</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="equipo">Moviles</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="chip">Tarjeta SIM</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="gestionchip">Tarjeta SIM Robada</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'asignacionmovil' }">Asignaciones</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'historicomovil' }">Asig. Historicos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'movil' }">Moviles</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'tarjetarobada' }">Tarjeta SIM</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'tarjetasim' }">Tarjeta SIM Robada</router-link></li>
                     </ul>
                 </li>
                 <li>
@@ -58,10 +59,10 @@
                         <i class='bx bxs-chevron-down arrow'></i>
                     </div>
                     <ul class="sub-menu">
-                        <li class="dark:hover:bg-gray-900"><router-link to="asigcomputador">Asignaciones</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="asigcomputador_hist">Asig. Historicos</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="computador">Computadores</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="doccomputadores">Doc. de Computadores</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'asignacioncomputador' }">Asignaciones</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'historicocomputador' }">Asig. Historicos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'computador' }">Computadores</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'documentacioncomputador' }">Doc. de Computadores</router-link></li>
                     </ul>
                 </li>
                 <li>
@@ -73,11 +74,11 @@
                         <i class='bx bxs-chevron-down arrow'></i>
                     </div>
                     <ul class="sub-menu">
-                        <li class="dark:hover:bg-gray-900"><router-link to="asignacionvehiculo">Asignaciones</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="asignacionvehiculo_hist">Asig. Historicos</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="vehiculo">Vehiculos</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="docvehiculos">Doc. de Vehiculos</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="gestionvehiculos">Gestión de Vehiculos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'asignacionvehiculo' }">Asignaciones</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'historicovehiculo' }">Asig. Historicos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'vehiculo' }">Vehiculos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'documentacionvehiculo' }">Doc. de Vehiculos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'gestionvehiculo' }">Gestión de Vehiculos</router-link></li>
                     </ul>
                 </li>
                 <li>
@@ -89,9 +90,9 @@
                         <i class='bx bxs-chevron-down arrow'></i>
                     </div>
                     <ul class="sub-menu">
-                        <li class="dark:hover:bg-gray-900"><router-link to="asigtarjeta">Asignaciones</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="tarjeta">Tarjetas</router-link></li>
-                        <li class="dark:hover:bg-gray-900"><router-link to="asigtarjeta_hist">Asig. Historicos</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'asignaciontarjeta' }">Asignaciones</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'tarjeta' }">Tarjetas</router-link></li>
+                        <li class="dark:hover:bg-gray-900"><router-link :to="{ name:'historicotarjeta' }">Asig. Historicos</router-link></li>
                     </ul>
                 </li>
                 <li>
