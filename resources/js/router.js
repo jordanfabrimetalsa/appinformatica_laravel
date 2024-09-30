@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import Index from "./components/Index.vue";
+
 import MovilDash from "./components/dashboard/movilComponent.vue";
 import ComputadorDash from "./components/dashboard/computadorComponent.vue";
 import TarjetaDash from "./components/dashboard/tarjetaComponent.vue";
@@ -32,6 +34,13 @@ import Vehiculo from "./components/vehiculo/vehiculoComponent.vue";
 import NotFound from "./components/NotFound.vue";
 
 const routes = [
+
+  { 
+    name: 'index',
+    path: '/',
+    component: Index
+  },
+
   /*DASHBOARD----------------------------*/
   { 
     name: 'movildash',
