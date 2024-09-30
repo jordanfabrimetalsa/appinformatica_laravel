@@ -9,7 +9,7 @@ class TGestion extends Model
 {
     use HasFactory;
 
-    protected $table = "tgestion";
+    protected $table = "tgestion_ve";
 
     protected $primaryKey = "idtgestion_ve";
 

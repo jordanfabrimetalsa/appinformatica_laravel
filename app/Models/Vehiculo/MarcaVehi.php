@@ -16,7 +16,6 @@ class MarcaVehi extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'idmarca',
         'nombre',
         'condicion'
     ];

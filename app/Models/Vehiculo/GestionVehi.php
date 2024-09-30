@@ -29,11 +29,10 @@ class GestionVehi extends Model
     ];
 
     public function vehiculo(){
-        return $this->belongsTo('App\Models\Vehiculo\Vehiculo');
+        return $this->belongsTo('App\Models\Vehiculo\Vehiculo', 'idvehiculo', 'idvehiculo');
     }
 
-    public function tGestion(){
-        return $this->belongsTo('App\Models\Vehiculo\TGestion');
+    public function tgestion(){
+        return $this->belongsTo('App\Models\Vehiculo\TGestion', 'idtgestion', 'idtgestion_ve');
     }
-
 }

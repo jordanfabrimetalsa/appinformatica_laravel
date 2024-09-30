@@ -16,14 +16,13 @@ class ModeloVehi extends Model
     public $timestamps = false;
     
     protected $fillable = [
-        'idmodelove',
         'nombre',
         'idmarca',
         'condicion'
     ];
 
     public function marca(){
-        return $this->belongsTo('App\Models\Vehiculo\MarcaVehi');
+        return $this->belongsTo('App\Models\Vehiculo\MarcaVehi', 'idmarca', 'idmarca');
     }
 
     public function vehiculo(){
