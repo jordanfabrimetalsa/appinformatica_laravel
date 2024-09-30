@@ -17,7 +17,7 @@ class empleadoController extends Controller
             return response()->json([
                 'status' => true,
                 'message' => 'Todos los registros de Empleados',
-                'data' => $empleado
+                'data' => $empleado,
             ], 200);
         }catch(Exception $e){
             return response()->json([

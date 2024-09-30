@@ -2,7 +2,7 @@
     <div>
         <div class="border border-gray-300 rounded-lg g-white sidebar close dark:bg-gray-800">
             <div class="mt-4 logo-details">
-                <img class="" src="../files/img/logo-sintexto.png" alt="">
+                <img class="" src="../../public/upload/logo-sintexto.png" alt="">
             </div>
             <ul class="nav-links ">
                 <li>
@@ -162,16 +162,21 @@
                 </span>
                     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                     <li>
-                        <img src="../files/img/logo-sintexto.png" class="w-10 transition duration-300 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+                        <img src="../../public/upload/logo-sintexto.png" class="w-10 transition duration-300 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
                     </li>
                     </ul>
             </footer>
 
-            <MenuHorizontal/>
         </section>
     </div>    
 </template>
 
 <script>
     import MenuHorizontal from './layouts/menuHorizontal.vue';
+
+    export default {
+        components: {
+            MenuHorizontal 
+        }
+    };
 </script>

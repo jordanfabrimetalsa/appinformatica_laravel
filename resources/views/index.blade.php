@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     @vite('resources/js/main.js')
-    @vite('resources/css/app.js')
+    @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100 dark:bg-gray-950">
     <div id="app">
