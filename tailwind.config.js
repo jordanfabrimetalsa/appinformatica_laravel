@@ -8,7 +8,9 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/*.vue',
+        './resources/js/App.vue',
         './resources/js/components/**',
+        './resources/js/layouts/**',
     ],
     darkMode: 'selector',
     theme: {

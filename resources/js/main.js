@@ -1,3 +1,5 @@
+
+import './bootstrap';
 import { createApp } from "vue";
 import '../css/app.css';
 import axios from "axios";
