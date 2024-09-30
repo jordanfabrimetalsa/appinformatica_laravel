@@ -39,14 +39,14 @@ class Vehiculo extends Model
 
 
     public function marca(){
-        return $this->belongsTo('App\Models\Vehiculo\MarcaVehi');
+        return $this->belongsTo('App\Models\Vehiculo\MarcaVehi', 'idmarca', 'idmarca');
     }
 
-    public function tVehiculo(){
-        return $this->belongsToMany('App\Models\Vehiculo\TVehiculo');
+    public function tvehiculo(){
+        return $this->belongsTo('App\Models\Vehiculo\TVehiculo', 'tvehiculo', 'idtvehiculo');
     }
 
     public function modelo(){
-        return $this->belongsTo('App\Models\Vehiculo\ModeloVehi');
+        return $this->belongsTo('App\Models\Vehiculo\ModeloVehi', 'idmodelo', 'idmodelove');
     }
 }
