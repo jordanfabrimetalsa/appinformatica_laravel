@@ -7,7 +7,7 @@ import ComputadorDash from "./components/dashboard/computadorComponent.vue";
 import TarjetaDash from "./components/dashboard/tarjetaComponent.vue";
 import VehiculoDash from "./components/dashboard/vehiculoComponent.vue";
 
-import Empleado from "./components/oficina/empleadoComponent.vue";
+import Empleado from "./components/oficina/empleado.vue";
 import DocEmpleado from "./components/oficina/docempleadoComponent.vue";
 
 import AsignacionMovil from "./components/movil/asignacionComponent.vue";

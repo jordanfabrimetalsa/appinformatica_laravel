@@ -25,6 +25,7 @@
                     </div>
                 </div>
             </div>
+            <MenuHorizontal></MenuHorizontal>
             <Footer></Footer>
         </section>
     </div>    
@@ -33,11 +34,13 @@
 <script>
     import NavComputador from './layouts/navComputadorComponent.vue';
     import Footer from './layouts/footerComponent.vue';
-
+    import MenuHorizontal from './layouts/menuHorizontal.vue';
+ 
     export default {
         components: {
             NavComputador,
-            Footer
+            Footer,
+            MenuHorizontal
         }
     };
 </script>

@@ -24,14 +24,18 @@
             <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
       
-      
-          <div x-data="{ isDarkMode: false, tooltipVisible: false }" class="grid">
-            <button id="toggleTheme" aria-label="Toggle Theme" type="button" class="inline-flex flex-col items-center justify-center px-5 mode hover:bg-gray-50 dark:hover:bg-gray-900 group" @click="isDarkMode = !isDarkMode" @mouseover="tooltipVisible = true" @mouseleave="tooltipVisible = false">
-              <i x-show="!isDarkMode" class='w-5 h-5 text-gray-500 bx bx-moon icon moon dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500'></i>
-              <i x-show="isDarkMode" class='w-5 h-5 text-gray-500 bx bx-sun icon sun dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500'></i>
+          <div x-data="{ isDarkMode: false }" class="grid">
+            <button
+                id="toggleTheme"
+                aria-label="Toggle Theme"
+                type="button"
+                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-900"
+                @click="isDarkMode = !isDarkMode; toggleDark()"
+            >
+                <i x-show="!isDarkMode" class="w-5 h-5 text-gray-500 bx bx-moon"></i>
+                <i x-show="isDarkMode" class="w-5 h-5 text-gray-500 bx bx-sun"></i>
             </button>
           </div>
-      
       
           <button data-tooltip-target="tooltip-settings" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-900 group ">
             <a href="#" @click="open = true" data-href="../../modulosfm2/firmatecnico/production/digitalsignature.php?context=firmatecnico" data-toggle="modal" data-target="#modalFirma" class="showModal">
@@ -62,5 +66,17 @@
       </div>
 </template>
 <script>
+import { useDark, useToggle } from "@vueuse/core";
 
+export default {
+    setup() {
+        const isDark = useDark();
+        const toggleDark = useToggle(isDark);
+
+        return {
+            toggleDark,
+            isDark,
+        };
+    },
+};
 </script>
