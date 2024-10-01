@@ -45,12 +45,12 @@
           </div>
       
           <button data-tooltip-target="tooltip-profile" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-e-lg hover:bg-gray-50 dark:hover:bg-gray-900 group">
-            <a href="../ajax/usuario.php?op=salir"">
+            <a href="../ajax/usuario.php?op=salir">
               <i class='w-5 h-5 mb-1 text-gray-500 bx bx-log-out icon dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500'></i>
-              <span class="sr-only ">Cerrar Sesión</span>
+              <span class="sr-only">Cerrar Sesión</span>
             </a>
           </button>
-          <div id=" tooltip-dark" role="tooltip" class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 z-100 tooltip dark:bg-gray-700">
+          <div id="tooltip-dark" role="tooltip" class="absolute invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 z-100 tooltip dark:bg-gray-700">
               Tooltip content
               <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
@@ -62,7 +62,5 @@
       </div>
 </template>
 <script>
-  export default {
-    name: 'menuHorizontal'
-  };
+
 </script>
