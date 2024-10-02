@@ -16,6 +16,7 @@
                       <a  class="text-gray-700  bg-gray-50 hover:bg-gray-200 border border-radius  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800 focus:outline-none dark:focus:ring-blue-800"><i class='bx bx-table'></i></a>
                     </div>
                   </li>
+                  
                 </ul>
               </div>
               <br>
@@ -34,9 +35,9 @@ import ListaEmpleado from './components/empleadoComponent.vue';
 import Formulario from './components/formulariaempleadoComponent.vue';
 
 export default{
-  components: {
-    ListaEmpleado
-  },data() {
+    components: {
+        ListaEmpleado
+    },data() {
         return { 
         empleados: [],
         redirigir: true,

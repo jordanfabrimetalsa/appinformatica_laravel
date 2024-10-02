@@ -24,16 +24,14 @@
             <div class="tooltip-arrow" data-popper-arrow></div>
           </div>
       
-          <div x-data="{ isDarkMode: false }" class="grid">
+          <div class="grid">
             <button
                 id="toggleTheme"
                 aria-label="Toggle Theme"
                 type="button"
-                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-900"
-                @click="isDarkMode = !isDarkMode; toggleDark()"
-            >
-                <i x-show="!isDarkMode" class="w-5 h-5 text-gray-500 bx bx-moon"></i>
-                <i x-show="isDarkMode" class="w-5 h-5 text-gray-500 bx bx-sun"></i>
+                class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-900">
+                <i v-if="cambiarModo" @click="isDarkMode = !isDarkMode; toggleDark()" class="w-5 h-5 text-gray-500 bx bx-moon"></i>
+                <i v-else @click="isDarkMode = !isDarkMode; toggleDark()" class="w-5 h-5 text-gray-500 bx bx-sun"></i>
             </button>
           </div>
       
@@ -69,6 +67,16 @@
 import { useDark, useToggle } from "@vueuse/core";
 
 export default {
+    data(){
+      return{
+        cambiarModo: true
+      }
+    },
+    method: {
+      cambiarModoDK(){
+        this.cambiarModo = !this.cambiarModo
+      }
+    },
     setup() {
         const isDark = useDark();
         const toggleDark = useToggle(isDark);
